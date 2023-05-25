@@ -1,1 +1,1 @@
-from .solution import GitSolution
+from .solution import GitSolution, ZipSolution

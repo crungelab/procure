@@ -1,12 +1,7 @@
 import subprocess
 from pathlib import Path
 
-from .project import Project
-
-
-class Solution(Project):
-    def update(self):
-        pass
+from .solution import Solution
 
 
 class GitSolution(Solution):
