@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "procure"
-version = "0.1.0"
+dynamic = ["version"]
 description = 'Procure build assets'
 readme = "README.md"
 requires-python = ">=3.8"

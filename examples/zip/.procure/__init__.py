@@ -1,9 +1,9 @@
-from procure import GitSolution
+from procure import ZipSolution
 
-class AwesomePython(GitSolution):
-	path = 'depot/awesome-python'
-	url = 'https://github.com/vinta/awesome-python'
+class FlutterEngine(ZipSolution):
+	path = 'depot/flutter-engine'
+	url = 'https://storage.googleapis.com/flutter_infra_release/flutter/90fa3ae28fe6ddaee1af2c120f01e50201c1401b/windows-x64/windows-x64-embedder.zip'
 
 solutions = [
-    AwesomePython,
+    FlutterEngine,
 ]
