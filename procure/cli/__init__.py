@@ -34,3 +34,4 @@ def update(ctx):
         solution = cls()
         print(f"Procuring:  {cls.__name__}")
         solution.update()
+        solution.post_update()

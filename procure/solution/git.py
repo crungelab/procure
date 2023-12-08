@@ -8,6 +8,7 @@ class GitSolution(Solution):
     path = ""
     url = ""
     branch = ""
+    recursive = False
 
     def update(self):
         path = Path(self.path)
@@ -18,6 +19,8 @@ class GitSolution(Solution):
 
     def clone(self):
         args = ["git", "clone"]
+        if self.recursive:
+            args = args + ["--recursive"]
         if self.branch:
             args = args + ["-b", self.branch]
         args = args + [self.url, self.path]
@@ -26,4 +29,7 @@ class GitSolution(Solution):
     def pull(self):
         path = Path(self.path)
         args = ["git", f"--git-dir={path / '.git'}", f"--work-tree={path}", "pull"]
+        if self.recursive:
+            args = args + ["--recurse-submodules"]
+
         subprocess.run(args)
